@@ -11,15 +11,6 @@ body {
   font-size: 24px;
   font-weight: 500;
 }
-.header-banner__img {
-  display: flex;
-  align-items: flex-start;
-  margin: 0;
-  width: 9rem;
-}
-.header-banner__img img {
-  width: 150%;
-}
 
 .footer-banner {
   display: flex;
@@ -39,35 +30,4 @@ body {
 }
 .nav-link.active {
   text-decoration: underline;
-}
-
-.home-banner {
-  position: relative;
-  background-image: url("/src/assets/images/Image_1.png");
-  background-size: cover;
-  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
-  background-position: center;
-  height: 220px;
-  margin: 2rem 5rem 2rem 5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  text-align: center;
-  border-radius: 25px;
-}
-.home-banner .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  z-index: 1;
-  border-radius: 25px;
-}
-.home-banner h1 {
-  position: relative;
-  z-index: 2;
-  font-size: 48px;
 }/*# sourceMappingURL=styles.css.map */

@@ -1,31 +1,31 @@
 body {
-    margin: 0;
-    font-family: 'Montserrat', sans-serif;
-    // -webkit-font-smoothing: antialiased;
-    // -moz-osx-font-smoothing: grayscale;
-  }
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  // -webkit-font-smoothing: antialiased;
+  // -moz-osx-font-smoothing: grayscale;
+}
   
-  .header-banner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 3rem 5rem 3rem 5rem;
-    font-size: 24px;
-    font-weight: 500;
-   
-    &__img {
-    display: flex;
-    align-items: flex-start;
-    margin: 0;
-    width: 9rem;
+.header-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3rem 5rem 3rem 5rem;
+  font-size: 24px;
+  font-weight: 500;
+  
+  // &__img {
+  // display: flex;
+  // align-items: flex-start;
+  // margin: 0;
+  // width: 9rem;
 
-      img {
-        width: 150%;
-      }
-    }    
-  }
+  //   img {
+  //     width: 150%;
+  //   }
+  // }    
+}
 
-  .footer-banner {
+.footer-banner {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -35,57 +35,18 @@ body {
     padding: 3rem 3rem 0 3rem;
     // margin: 0;
     color: white;    
-  }  
+}  
 
-  .nav-link {
-    margin-left: 3rem;
-    text-decoration: none; 
-    color: black; 
-        
-    &.active {
-      text-decoration: underline;
-    }
+.nav-link {
+  margin-left: 3rem;
+  text-decoration: none; 
+  color: black; 
+      
+  &.active {
+    text-decoration: underline;
   }
-
-  
-  
-
-
-
-  .home-banner {
-    position: relative;
-    background-image: url('/src/assets/images/Image_1.png'); // Chemin vers ton image
-    background-size: cover; 
-    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
-    background-position: center; 
-    height: 220px;
-    margin: 2rem 5rem 2rem 5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white; 
-    text-align: center;
-    border-radius: 25px;
-
-    .overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.6); // Couleur noire avec opacité de 50%
-      z-index: 1;
-      border-radius: 25px;
-    }
-
-    h1 {
-      position: relative;
-      z-index: 2;
-      font-size: 48px;
-      // font-weight: bold;
-  }
-
-  
 }
 
-   
+
+
+

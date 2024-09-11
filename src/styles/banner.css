@@ -1,0 +1,29 @@
+.banner {
+  position: relative;
+  background-size: cover;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+  background-position: center;
+  height: 220px;
+  margin: 2rem 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-radius: 25px;
+}
+.banner .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+  border-radius: 25px;
+}
+.banner h1 {
+  position: relative;
+  z-index: 2;
+  font-size: 48px;
+  text-align: center;
+}/*# sourceMappingURL=banner.css.map */

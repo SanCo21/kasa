@@ -1,30 +1,34 @@
 import { useEffect, useState } from 'react';
 import CardList from "../components/CardList";
-// import cards from './cardsData';
+import Banner from "../components/Banner";
+import bannerImage from '../assets/images/Image_1.png';
 
-const cardCount = 6;
 
 const Home = () => {
   const [cards, setCards] = useState([]);
 
   useEffect(() => {
-      fetch("/data/logements.json")
-          .then(response => response.json())
-          .then(data => setCards(data))
-          .catch(error => console.error('Erreur lors du chargement des données:', error));
-          setCards(Array(cardCount).fill({ title: '', image: '' }));
-  }, []);
+    fetch('/data/logements.json')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then(data => setCards(data))
+    .catch(error => {
+      console.error('Error loading data:', error);
+      // Empty cards if data loading fails
+      setCards(Array(6).fill({ title: 'Titre de la location', image: '' }));
+    });
+}, []);
 
 
     return (
-      <div className='main'>
-        <div className="home-banner">
-        <div className="overlay"></div>
-          <h1>Chez vous, partout et ailleurs</h1>
-          {/* <img src="src/assets/images/Image_1.png" alt="côte rocheuse en image de fond" /> */}
-        </div>
+      <div>
+        <Banner title="Chez vous, partout et ailleurs" image={bannerImage} />
         <CardList cardsArray={cards} />
-      </div>
+    </div>
     );
   };
   
