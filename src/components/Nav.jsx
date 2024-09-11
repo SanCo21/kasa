@@ -5,7 +5,7 @@ function Navigation() {
     return (
         <nav>
             <NavLink className='nav-link' to="/">Accueil</NavLink>
-            <NavLink className='nav-link' to="/about">À propos</NavLink>            
+            <NavLink className='nav-link' to="/about">À Propos</NavLink>            
         </nav>
     );
 }

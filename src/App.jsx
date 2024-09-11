@@ -1,4 +1,4 @@
-// import React from "react";
+
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -6,6 +6,7 @@ import About from "./pages/About";
 import FicheLogement from "./pages/Fiche-Logement";
 // import Footer from "./components/Footer";
 import Error from "./pages/Error";
+import './styles/main.scss';
 
 // function App() {
 // 	return (

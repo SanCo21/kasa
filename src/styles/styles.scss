@@ -39,12 +39,43 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    // justify-content: end;
     font-size: 24px;
     font-weight: 500;
     background-color: black;
     padding: 3rem 3rem 0 3rem;
-    color: white;
-
-    
+    color: white;    
   }
+
+  .home-banner {
+    position: relative;
+    background-image: url('/src/assets/images/Image_1.png'); // Chemin vers ton image
+    background-size: cover; 
+    background-position: center; 
+    height: 220px;
+    margin: 2rem 4.5rem 2rem 4.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white; 
+    text-align: center;
+    border-radius: 25px;
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6); // Couleur noire avec opacité de 50%
+      z-index: 1;
+      border-radius: 25px;
+    }
+
+    h1 {
+      position: relative;
+      z-index: 2;
+      font-size: 48px;
+      // font-weight: bold;
+  }
+}
+
