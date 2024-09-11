@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import CardList from "../components/CardList";
 // import cards from './cardsData';
 
-
+const cardCount = 6;
 
 const Home = () => {
   const [cards, setCards] = useState([]);
@@ -12,11 +12,12 @@ const Home = () => {
           .then(response => response.json())
           .then(data => setCards(data))
           .catch(error => console.error('Erreur lors du chargement des données:', error));
+          setCards(Array(cardCount).fill({ title: '', image: '' }));
   }, []);
 
 
     return (
-      <div>
+      <div className='main'>
         <div className="home-banner">
         <div className="overlay"></div>
           <h1>Chez vous, partout et ailleurs</h1>
