@@ -1,0 +1,16 @@
+.fiche-logement-collapses {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 94%;
+  margin-right: 5rem;
+  margin-left: 5rem;
+  gap: 56px;
+}
+.fiche-logement-collapses .collapse-title h2 {
+  font-size: 18px !important;
+}
+.fiche-logement-collapses .collapse-content {
+  font-size: 18px !important;
+  min-height: 200px;
+}/*# sourceMappingURL=ficheLogement.css.map */

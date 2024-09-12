@@ -1,7 +1,7 @@
 .logement-info {
   display: flex;
   justify-content: space-between;
-  margin: 0.5rem 5rem 3rem 5rem;
+  margin: 0.5rem 5rem 0.5rem 5rem;
 }
 .logement-info .left-column {
   display: flex;
@@ -20,18 +20,21 @@
 }
 .logement-info .left-column .tags {
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
   gap: 10px;
 }
 .logement-info .left-column .tags .tag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #FF6060;
   color: white;
-  padding: 5px 10px;
+  padding: 2px 15px;
   border-radius: 10px;
   font-size: 14px;
   font-weight: bold;
-  width: 125px;
   text-align: center;
+  min-height: 25px;
 }
 .logement-info .right-column {
   display: flex;

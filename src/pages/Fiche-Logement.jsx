@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import LogementInfo from '../components/LogementInfo';
 import Carousel from '../components/carousel';
+import Collapse from '../components/Collapse';
 
 const FicheLogement = () => {
   const { id } = useParams();
@@ -29,6 +30,18 @@ const FicheLogement = () => {
         rating={logement.rating}
         tags={logement.tags}
       />
+      <div className="collapse-container">
+        <div className="fiche-logement-collapses">
+        <Collapse title="Description" content={logement.description} />
+        <Collapse title="Équipements" content={
+          <ul>
+            {logement.equipments.map((equipment, index) => (
+              <li key={index}>{equipment}</li>
+            ))}
+          </ul>
+        } />
+      </div>
+      </div>
     </div>
   );
 };
