@@ -7,10 +7,9 @@ const Collapse = ({ title, content }) => {
 
     return (
         <div className="collapse">
-            <div className="collapse-header" onClick={() => setIsOpen(!isOpen)}>
+            <div className="collapse-title" onClick={() => setIsOpen(!isOpen)}>
                 <h2>{title}</h2>
-                <img src={arrowIcon} alt="Toggle" className={`arrow ${isOpen ? 'open' : ''}`}/>
-                {/* <span className={`arrow ${isOpen ? 'open' : ''}`}>▼</span> */}
+                <img src={arrowIcon} alt="bouton de bascule pour afficher/masquer" className={`arrow ${isOpen ? 'open' : ''}`}/>
             </div>
             {isOpen && <div className="collapse-content">{content}</div>}
         </div>

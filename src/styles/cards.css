@@ -42,8 +42,8 @@
   background-color: #F6f6f6;
   display: flex;
   flex-wrap: wrap;
-  gap: 3rem;
-  justify-content: space-between;
+  gap: 3.5rem;
+  justify-content: flex-start;
   align-items: center;
   padding: 3.5rem;
   margin: 3rem 5rem 3rem 5rem;
