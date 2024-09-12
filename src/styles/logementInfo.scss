@@ -1,0 +1,94 @@
+.logement-info {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem 5rem 3rem 5rem;
+  
+    .left-column {
+        display: flex;
+        flex-direction: column;
+
+        h1 {
+            font-size: 36px;
+            font-weight: 500;
+            color: #FF6060;
+            margin-bottom: 0;
+        }  
+      
+        p {
+            font-size: 18px;  
+            font-weight: 500;
+            margin-top: 5px;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;            
+          
+            .tag {
+                background-color: #FF6060;
+                color: white;
+                padding: 5px 10px;
+                border-radius: 10px;
+                font-size: 14px;
+                font-weight: bold;
+                width: 125px;
+                text-align: center;
+            }
+          }
+    }
+  
+    .right-column {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: space-between;
+        margin-top: 24px;
+    
+        .host-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        
+            .host-name {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                color: #FF6060;
+                font-size: 18px;
+                font-weight: 500;
+                
+                p {
+                  margin: 0;
+                  text-align: right;
+                  
+                  &:first-child {
+                    margin-bottom: 3px;
+                  }
+                }
+              }
+        
+            img {
+                width: 64px;
+                height: 64px;
+                border-radius: 50%;
+            }
+        }
+            
+        .rating {
+            display: flex;
+            gap: 5px;
+    
+            .star {
+                    width: 30px;
+                    height: 30px;
+                    fill: #E3E3E3;
+        
+                &--active {
+                    fill: #FF6060;
+                }
+            }
+        }        
+    }
+}

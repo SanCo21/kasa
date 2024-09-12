@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react';
 import CardList from "../components/CardList";
 import Banner from "../components/Banner";
 import bannerImage from '../assets/images/Image_1.png';
-
+// import { Link } from 'react-router-dom';
+// import Card from "../components/Card";
 
 const Home = () => {
   const [cards, setCards] = useState([]);
@@ -23,12 +24,11 @@ const Home = () => {
     });
 }, []);
 
-
     return (
       <div>
         <Banner title="Chez vous, partout et ailleurs" image={bannerImage} />
         <CardList cardsArray={cards} />
-    </div>
+      </div>
     );
   };
   
