@@ -19,6 +19,8 @@
   border-radius: 5px;
   color: white;
   cursor: pointer;
+  position: relative;
+  z-index: 1;
 }
 .collapse-container .collapse .collapse-title h2 {
   font-size: 24px;
@@ -26,9 +28,20 @@
 }
 .collapse-container .collapse .collapse-content {
   background-color: #F6F6F6;
-  padding: 15px;
+  max-height: 0;
+  overflow: hidden;
+  z-index: 0;
+}
+.collapse-container .collapse .collapse-content.open {
+  max-height: 100px;
+  padding: 15px 20px;
+}
+.collapse-container .collapse .collapse-content.closing {
+  max-height: 0;
+}
+.collapse-container .collapse .collapse-content p {
   font-size: 20px;
-  border-radius: 0 0 5px 5px;
+  margin: 0;
 }
 
 .arrow {
@@ -38,4 +51,8 @@
 
 .arrow.open {
   transform: rotate(0deg);
+}
+
+.arrow.closing {
+  transform: rotate(180deg);
 }/*# sourceMappingURL=collapse.css.map */

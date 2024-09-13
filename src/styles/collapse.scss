@@ -7,7 +7,6 @@
     margin: 0 auto;
     padding: 20px;
 
-
     .collapse {    
         width: 80%;
         margin-bottom: 30px;
@@ -21,6 +20,8 @@
             border-radius: 5px;
             color: white;
             cursor: pointer;
+            position: relative;
+            z-index: 1;
     
             h2 {
                 font-size: 24px;
@@ -30,9 +31,36 @@
     
         .collapse-content {
             background-color: #F6F6F6;
-            padding: 15px;
-            font-size: 20px;
-            border-radius: 0 0 5px 5px;
+            max-height: 0;
+            overflow: hidden;
+            // padding: 0 20px;
+            // opacity: 0;
+            // transform: translateY(-80px);
+            // transition: max-height 0.3s linear, padding 0.3s linear, opacity 0.3s linear, transform 0.3s linear;
+            // position: relative;
+            z-index: 0;
+            
+            
+            &.open {
+                // min-height: 200px;
+                max-height: 100px;
+                padding: 15px 20px;
+                // opacity: 1;
+                // transform: translateY(0);
+                // transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out, opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+            }
+    
+            &.closing {
+                max-height: 0;
+                // opacity: 0;
+                // transform: translateY(-100%); 
+                // transition: max-height 0.2s linear, padding 0.2s linear, opacity 0.3s linear, transform 0.3s linear;
+            }
+
+            p {                
+                font-size: 20px;
+                margin: 0;
+            }
         }
     }
 }
@@ -44,4 +72,8 @@
 
 .arrow.open {
     transform: rotate(0deg);
+}
+
+.arrow.closing {
+    transform: rotate(180deg);
 }
