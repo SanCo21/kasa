@@ -1,59 +1,70 @@
-.card {
-  position: relative;
-  z-index: 0;
-  overflow: hidden;    
-  border-radius: 10px;
-  height: 340px;
-  width: 340px;
-  cursor: pointer;
-  
-  &.card-empty {
-    background: #ff6060 100%;
-
-    &::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: linear-gradient(
-        to top,
-        #0a0a0a 0%,
-        rgba(255, 255, 255, 0) 100%
-      );
-      opacity: 0.5;
-    }
-  }
-
-  .card-title {
-    position: absolute;
-    z-index: 1;
-    bottom: 20px;
-    left: 20px;       
-    font-size: 18px;
-    margin: 0;
-    color: white;        
-    text-overflow: ellipsis;
-  }
-
-  .card-image {
-    // z-index: 0;
-    position: relative;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-}
-    
-    
 .card-list {
   background-color: #F6f6f6;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 3.5rem;
-  justify-content: flex-start;
+  display: grid;
+  // grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  justify-content: center;
   align-items: center;
-  padding: 3.5rem;
+  padding: 2rem;
   margin: 3rem 5rem 3rem 5rem;
+
+  .card {
+    position: relative;
+    z-index: 0;
+    overflow: hidden;    
+    border-radius: 10px;
+    height: 340px;
+    width: 340px;
+    cursor: pointer;
+    
+    &.card-empty {
+      background: #ff6060 100%;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(
+          to top,
+          #0a0a0a 0%,
+          rgba(255, 255, 255, 0) 100%
+        );
+        opacity: 0.5;
+      }
+    }
+
+    .card-title {
+      position: absolute;
+      z-index: 1;
+      bottom: 20px;
+      left: 20px;       
+      font-size: 18px;
+      margin: 0;
+      color: white;        
+      text-overflow: ellipsis;
+    }
+
+    .card-image {
+      // z-index: 0;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
 }
+
+// .card-list {
+//   background-color: #F6f6f6;
+//   display: flex;
+//   flex-wrap: wrap;
+//   gap: 3.5rem;
+//   justify-content: center;
+//   align-items: center;
+//   padding: 3.5rem;
+//   margin: 3rem 5rem 3rem 5rem;
+// }

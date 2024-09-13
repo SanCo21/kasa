@@ -18,7 +18,6 @@
   padding: 10px 15px;
   border-radius: 5px;
   color: white;
-  cursor: pointer;
   position: relative;
   z-index: 1;
 }
@@ -26,33 +25,27 @@
   font-size: 24px;
   margin: 0;
 }
+.collapse-container .collapse .collapse-title .arrow {
+  cursor: pointer;
+  transition: transform 0.3s ease-out;
+}
+.collapse-container .collapse .collapse-title .arrow.open {
+  transform: rotate(180deg);
+}
 .collapse-container .collapse .collapse-content {
   background-color: #F6F6F6;
+  transition: max-height 0.3s ease-out, transform 0.3s ease-out, opacity 0.3s ease-out;
+  transform: translateY(-50%);
   max-height: 0;
+  opacity: 0;
   overflow: hidden;
+  padding: 0 15px;
+  font-size: 18px;
   z-index: 0;
 }
 .collapse-container .collapse .collapse-content.open {
-  max-height: 100px;
-  padding: 15px 20px;
-}
-.collapse-container .collapse .collapse-content.closing {
-  max-height: 0;
-}
-.collapse-container .collapse .collapse-content p {
-  font-size: 20px;
-  margin: 0;
-}
-
-.arrow {
-  transform: rotate(180deg);
-  transition: transform 0.3s ease;
-}
-
-.arrow.open {
-  transform: rotate(0deg);
-}
-
-.arrow.closing {
-  transform: rotate(180deg);
+  transform: translateY(0);
+  max-height: 200px;
+  opacity: 1;
+  padding: 15px 15px;
 }/*# sourceMappingURL=collapse.css.map */
