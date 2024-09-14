@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import LogementInfo from '../components/LogementInfo';
 import Carousel from '../components/carousel';
 import Collapse from '../components/Collapse';
 
 const FicheLogement = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
   const [logement, setLogement] = useState(null);
 
   useEffect(() => {
@@ -13,10 +14,17 @@ const FicheLogement = () => {
       .then(response => response.json())
       .then(data => {
         const currentLogement = data.find(item => item.id === id);
-        setLogement(currentLogement);
+        if (!currentLogement) {
+          navigate('/error');
+        } else {
+          setLogement(currentLogement);
+        }
       })
-      .catch(error => console.error('Error loading data:', error));
-  }, [id]);
+      .catch(error => {
+        console.error('Error loading data:', error);
+        navigate('/error');
+      });
+  }, [id, navigate]);
 
   if (!logement) return <div>Loading...</div>;
 

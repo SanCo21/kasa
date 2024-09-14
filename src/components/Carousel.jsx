@@ -18,13 +18,17 @@ const Carousel = ({ pictures }) => {
   return (
     <div className="carousel">
       <img src={pictures[currentIndex]} alt={`Slide ${currentIndex + 1}`} className="carousel-image" />
-      <button onClick={prevSlide} className="carousel-button prev">
-        <img src={leftArrow} alt="Previous" />
-      </button>
-      <button onClick={nextSlide} className="carousel-button next">
-        <img src={rightArrow} alt="Next" />
-      </button>
-      <p className="carousel-counter">{currentIndex + 1} / {pictures.length}</p>
+      {pictures.length > 1 && (
+        <div>
+          <button onClick={prevSlide} className="carousel-button prev">
+            <img src={leftArrow} alt="Précédente" />
+          </button>
+          <button onClick={nextSlide} className="carousel-button next">
+            <img src={rightArrow} alt="Suivante" />
+          </button>
+          <p className="carousel-counter">{currentIndex + 1} / {pictures.length}</p>
+        </div>
+      )}
     </div>
   );
 };
