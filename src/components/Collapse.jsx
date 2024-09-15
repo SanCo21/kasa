@@ -9,7 +9,9 @@ const Collapse = ({ title, content }) => {
         <div className="collapse">
             <div className="collapse-title" aria-expanded={isOpen} >
                 <h2>{title}</h2>
-                <img src={arrowIcon} alt="bouton de bascule pour afficher/masquer" 
+                <img 
+                    src={arrowIcon} 
+                    alt="bouton de bascule pour afficher/masquer" 
                     className={`arrow ${isOpen ? 'open' : ''}`}
                     onClick={() => setIsOpen(!isOpen)}  />                
             </div>

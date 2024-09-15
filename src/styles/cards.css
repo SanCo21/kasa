@@ -1,24 +1,48 @@
 .card-list {
-  background-color: #F6f6f6;
+  width: 100%;
+  background-color: #F6F6F6;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  gap: 4rem;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
-  margin: 3rem 5rem 3rem 5rem;
+  padding: 4rem;
+  margin-top: 3rem;
+}
+@media screen and (max-width: 425px) {
+  .card-list {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    width: 335px;
+  }
+  .card-list a {
+    height: 255px;
+    width: 335px;
+  }
+  .card-list a:nth-child(n+4) {
+    display: none;
+  }
 }
 .card-list .card {
   position: relative;
   z-index: 0;
   overflow: hidden;
   border-radius: 10px;
+  cursor: pointer;
   height: 340px;
   width: 340px;
-  cursor: pointer;
+}
+@media screen and (max-width: 425px) {
+  .card-list .card {
+    height: 255px;
+    width: 335px;
+  }
 }
 .card-list .card.card-empty {
-  background: #ff6060 100%;
+  background: #FF6060 100%;
 }
 .card-list .card.card-empty::before {
   content: "";
@@ -31,6 +55,7 @@
   opacity: 0.5;
 }
 .card-list .card .card-title {
+  width: 40%;
   position: absolute;
   z-index: 1;
   bottom: 20px;

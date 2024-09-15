@@ -1,6 +1,4 @@
-// import Card from './CardList';
 import PropTypes from 'prop-types';
-// import './cards.scss';
   
 function Card({ image, title }) {
   const isEmptyCard = !image;

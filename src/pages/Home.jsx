@@ -25,7 +25,7 @@ const Home = () => {
 }, []);
 
     return (
-      <div>
+      <div className='container'>
         <Banner title="Chez vous, partout et ailleurs" image={bannerImage} />
         <CardList cardsArray={cards} />
       </div>

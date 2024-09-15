@@ -16,7 +16,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: #FF6060;
+            background-color: $first-color;
             padding: 10px 15px;
             border-radius: 5px;
             color: white;
@@ -40,7 +40,7 @@
         
         .collapse-content {
             background-color: #F6F6F6;
-            transition: max-height 0.3s ease-out, transform 0.3s ease-out, opacity 0.3s ease-out;
+            transition: max-height 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
             transform: translateY(-50%);
             max-height: 0;
             opacity: 0;
@@ -54,7 +54,7 @@
                 max-height: 200px;
                 // height: auto;
                 opacity: 1;
-                padding: 15px 15px;
+                // padding: 15px 15px;
             }
         }
     }
