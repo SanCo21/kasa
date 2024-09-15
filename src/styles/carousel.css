@@ -9,6 +9,7 @@
   .carousel {
     width: 90%;
     height: 255px;
+    margin: 0;
   }
 }
 .carousel .carousel-image {
