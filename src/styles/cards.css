@@ -7,7 +7,7 @@
   justify-content: center;
   align-items: center;
   padding: 4rem;
-  margin-top: 3rem;
+  margin-top: 1rem;
 }
 @media screen and (max-width: 425px) {
   .card-list {
@@ -15,6 +15,7 @@
     gap: 1rem;
     background-color: transparent;
     margin: 0;
+    margin-top: 1rem;
     padding: 0;
     width: 335px;
   }

@@ -3,14 +3,22 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 95%;
-    margin: 0 auto;
-    padding: 20px;
+    width: 100%;
+    margin: 0.5rem 4rem;
 
+    @include breakpoint-mobile {        
+        margin-top: 0;
+        margin-bottom: 0;
+    }
 
     .collapse {
         width: 80%;
         margin-bottom: 30px;
+
+        @include breakpoint-mobile {
+            width: 88%;
+            margin-bottom: 0rem;
+        }
         
         .collapse-title {
             display: flex;
@@ -23,17 +31,32 @@
             position: relative;
             z-index: 1;
 
+            @include breakpoint-mobile {
+                height: 30px;
+                margin-top: 1rem;
+                padding: 0rem 0.7rem;
+            }
+
             h2 {
                 font-size: 24px;
                 margin: 0;
+
+                @include breakpoint-mobile {
+                    font-size: 13px;
+                }
             }
         
             .arrow {
                 cursor: pointer;
+                transform: rotate(180deg);
                 transition: transform 0.3s ease-out;
+
+                @include breakpoint-mobile {
+                    width: 6%;
+                }
             
                 &.open {
-                    transform: rotate(180deg);
+                    transform: rotate(0deg);
                 }
             }
         }
@@ -49,12 +72,19 @@
             font-size: 18px;
             z-index: 0;
 
+            p {
+                margin: 1rem 0.3rem;
+
+                @include breakpoint-mobile {
+                    font-size: 12px;
+                    margin: 0.5rem 0;
+                }
+            }
+
             &.open {
                 transform: translateY(0);
                 max-height: 200px;
-                // height: auto;
                 opacity: 1;
-                // padding: 15px 15px;
             }
         }
     }

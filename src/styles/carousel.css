@@ -1,14 +1,27 @@
 .carousel {
   position: relative;
+  width: 100%;
   height: 415px;
   overflow: hidden;
   margin: 0 5rem;
+}
+@media screen and (max-width: 425px) {
+  .carousel {
+    width: 90%;
+    height: 255px;
+  }
 }
 .carousel .carousel-image {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 25px;
+}
+@media screen and (max-width: 425px) {
+  .carousel .carousel-image {
+    border-radius: 10px;
+  }
 }
 .carousel .carousel-button {
   position: absolute;
@@ -22,11 +35,27 @@
   width: 96px;
   height: 120px;
 }
+@media screen and (max-width: 425px) {
+  .carousel .carousel-button img {
+    width: 24px;
+    height: 24px;
+  }
+}
 .carousel .carousel-button.prev {
   left: 5px;
 }
+@media screen and (max-width: 425px) {
+  .carousel .carousel-button.prev {
+    left: -5px;
+  }
+}
 .carousel .carousel-button.next {
   right: 5px;
+}
+@media screen and (max-width: 425px) {
+  .carousel .carousel-button.next {
+    right: -5px;
+  }
 }
 .carousel .carousel-counter {
   position: absolute;
@@ -35,4 +64,9 @@
   transform: translateX(-50%);
   color: white;
   font-size: 18px;
+}
+@media screen and (max-width: 425px) {
+  .carousel .carousel-counter {
+    color: transparent;
+  }
 }/*# sourceMappingURL=carousel.css.map */

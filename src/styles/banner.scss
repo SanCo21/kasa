@@ -5,7 +5,7 @@
   background-position: center; 
   height: 220px;
   width: 100%;
-  // margin: 2rem 5rem;
+  margin-bottom: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -15,7 +15,7 @@
     @include breakpoint-mobile {
       width: 89%; 
       height: 111px;
-      margin: 0 1rem 1rem 1rem;  
+      margin: 0 1rem 0rem 1rem;  
       border-radius: 10px;
       justify-content: flex-start;
     }

@@ -29,7 +29,7 @@ const FicheLogement = () => {
   if (!logement) return <div>Loading...</div>;
 
   return (
-    <div>
+    <div className='container'>
       <Carousel pictures={logement.pictures} />
       <LogementInfo 
         title={logement.title}

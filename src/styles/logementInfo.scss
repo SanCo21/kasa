@@ -2,29 +2,55 @@
     display: flex;
     justify-content: space-between;
     margin: 0.5rem 5rem 0.5rem 5rem;
+    width: 100%;
+
+    @include breakpoint-mobile {
+        width: 90%;
+        flex-direction: column;
+    }
   
     .left-column {
         display: flex;
         flex-direction: column;
+        width: 70%;
+        margin-top: 24px;
+
+        @include breakpoint-mobile {
+            margin-top: 0rem;
+            width: 100%;
+        }
 
         h1 {
             font-size: 36px;
             font-weight: 500;
             color: $first-color;
             margin-bottom: 0;
+
+            @include breakpoint-mobile {
+                font-size: 18px;
+              }
         }  
       
         p {
             font-size: 18px;  
             font-weight: 500;
             margin-top: 5px;
+
+            @include breakpoint-mobile {
+                font-size: 14px;
+            }
         }
 
         .tags {
             display: flex;
             align-items: center;
             // flex-wrap: wrap;
-            gap: 10px;            
+            gap: 10px;
+            margin-top: 1.5rem;  
+            
+            @include breakpoint-mobile {
+                margin-top: 0.5rem;
+            }
           
             .tag {
                 display: flex;
@@ -40,6 +66,10 @@
                 text-align: center;
                 min-height: 25px; // Set a minimum height for all tags
                 // box-sizing: border-box; // Ensure padding is included in the height
+
+                @include breakpoint-mobile {
+                    font-size: 10px;
+                }
             }
           }
     }
@@ -50,12 +80,23 @@
         align-items: flex-end;
         justify-content: space-between;
         margin-top: 24px;
+
+        @include breakpoint-mobile {            
+            margin-top: 1rem;            
+            width: 100%;
+            align-items: center;
+            flex-direction: row-reverse;
+        }
     
         .host-info {
             display: flex;
             align-items: center;
             gap: 10px;
             margin-bottom: 15px;
+
+            @include breakpoint-mobile {
+                margin-bottom: 0;
+            }
         
             .host-name {
                 display: flex;
@@ -64,6 +105,10 @@
                 color: $first-color;
                 font-size: 18px;
                 font-weight: 500;
+
+                @include breakpoint-mobile {
+                    font-size: 12px;
+                }
                 
                 p {
                   margin: 0;
@@ -80,6 +125,11 @@
                 width: 64px;
                 height: 64px;
                 border-radius: 50%;
+
+                @include breakpoint-mobile {
+                    width: 32px;
+                    height: 32px;
+                }
             }
         }
             
@@ -91,6 +141,11 @@
                     width: 30px;
                     height: 30px;
                     fill: $fourth-color;
+
+                    @include breakpoint-mobile {
+                        width: 18px;
+                        height: 18px;
+                    }
         
                 &--active {
                     fill: $first-color;
