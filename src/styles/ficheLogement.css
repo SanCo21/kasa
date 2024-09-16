@@ -3,14 +3,14 @@
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
-  margin-left: 0rem;
-  margin-right: 0rem;
+  margin-left: 0;
+  margin-right: 0;
 }
 @media screen and (max-width: 425px) {
   .fiche-logement-collapses {
     flex-direction: column;
-    width: 102%;
-    margin-left: 3rem;
+    width: 90%;
+    margin-left: 1.15rem;
   }
 }
 .fiche-logement-collapses .collapse {
@@ -19,20 +19,9 @@
 }
 @media screen and (max-width: 425px) {
   .fiche-logement-collapses .collapse {
+    flex: none;
     max-width: 100%;
   }
-}
-.fiche-logement-collapses .collapse .collapse-title h2 {
-  font-size: 18px !important;
-}
-@media screen and (max-width: 425px) {
-  .fiche-logement-collapses .collapse .collapse-title h2 {
-    font-size: 13px !important;
-  }
-}
-.fiche-logement-collapses .collapse .collapse-content {
-  font-size: 18px !important;
-  padding: 0 20px;
 }
 .fiche-logement-collapses .collapse .collapse-content ul {
   margin: 1rem -2rem;

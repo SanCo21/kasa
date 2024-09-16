@@ -1,0 +1,24 @@
+@import '../styles/variables';
+@import '../styles/mixins';
+
+.about-collapses {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0.5rem 4rem;
+
+    @include breakpoint-mobile {        
+        margin: 0;
+    }
+
+    .collapse {
+        width: 80%;
+        margin-bottom: 30px;
+
+        @include breakpoint-mobile {
+            width: 88%;
+            margin-bottom: 0rem;
+        }
+    }
+}

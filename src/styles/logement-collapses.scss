@@ -6,43 +6,27 @@
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
-    margin-left: 0rem;   
-    margin-right: 0rem;  
-    // gap: 6rem;
-    //   margin-top: 24px;
+    margin-left: 0;   
+    margin-right: 0;      
 
     @include breakpoint-mobile {
-        flex-direction: column;
-        width: 102%;
-        margin-left: 3rem;
+        flex-direction: column;           
+        width: 90%;
+        margin-left: 1.15rem;
     }
 
     .collapse {
         flex: 1;
         max-width: calc(50% - 40px);
 
-        @include breakpoint-mobile {            
+        @include breakpoint-mobile {  
+            flex: none;      
             max-width: 100%;
-        }
-
-        .collapse-title h2 {
-            font-size: 18px !important;
-
-            @include breakpoint-mobile {            
-                font-size: 13px !important;
-            }
-        }
-            
-        .collapse-content {
-            font-size: 18px !important;
-            padding: 0 20px;
-            // min-height: 200px;
         }
 
         .collapse-content ul {
             margin: 1rem -2rem;
             list-style-type: none;
-
 
             @include breakpoint-mobile {            
                 font-size: 12px;

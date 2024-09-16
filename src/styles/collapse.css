@@ -1,16 +1,4 @@
-.collapse-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 95%;
-  margin: 0 auto;
-  padding: 20px;
-}
-.collapse-container .collapse {
-  width: 80%;
-  margin-bottom: 30px;
-}
-.collapse-container .collapse .collapse-title {
+.collapse-title {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -21,18 +9,37 @@
   position: relative;
   z-index: 1;
 }
-.collapse-container .collapse .collapse-title h2 {
+@media screen and (max-width: 425px) {
+  .collapse-title {
+    height: 30px;
+    margin-top: 1rem;
+    padding: 0rem 0.7rem;
+  }
+}
+.collapse-title h2 {
   font-size: 24px;
   margin: 0;
 }
-.collapse-container .collapse .collapse-title .arrow {
+@media screen and (max-width: 425px) {
+  .collapse-title h2 {
+    font-size: 13px;
+  }
+}
+.collapse-title .arrow {
   cursor: pointer;
+  transform: rotate(180deg);
   transition: transform 0.3s ease-out;
 }
-.collapse-container .collapse .collapse-title .arrow.open {
-  transform: rotate(180deg);
+@media screen and (max-width: 425px) {
+  .collapse-title .arrow {
+    width: 6%;
+  }
 }
-.collapse-container .collapse .collapse-content {
+.collapse-title .arrow.open {
+  transform: rotate(0deg);
+}
+
+.collapse-content {
   background-color: #F6F6F6;
   transition: max-height 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
   transform: translateY(-50%);
@@ -43,7 +50,16 @@
   font-size: 18px;
   z-index: 0;
 }
-.collapse-container .collapse .collapse-content.open {
+.collapse-content p {
+  margin: 1rem 0.3rem;
+}
+@media screen and (max-width: 425px) {
+  .collapse-content p {
+    font-size: 12px;
+    margin: 0.5rem 0;
+  }
+}
+.collapse-content.open {
   transform: translateY(0);
   max-height: 200px;
   opacity: 1;

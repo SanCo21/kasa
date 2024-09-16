@@ -1,86 +1,204 @@
+* {
+  box-sizing: border-box;
+  margin: 0rem;
+}
+
 body {
-  min-width: 335px;
+  min-width: 375px;
   max-width: 1440px;
+  width: 100%;
   margin: 0 auto;
   font-family: "Montserrat", sans-serif;
 }
-
-.header-banner {
+@media screen and (max-width: 425px) {
+  body {
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+body #root {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 0;
+  padding: 0;
+}
+@media screen and (max-width: 425px) {
+  body #root {
+    box-sizing: border-box;
+  }
+}
+body #root .header-banner {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 3rem 5rem 3rem 5rem;
+  width: 90%;
 }
 @media screen and (max-width: 425px) {
-  .header-banner {
-    margin: 1rem;
-    width: 335px;
+  body #root .header-banner {
+    margin: 1.5rem;
+    width: 88%;
   }
 }
 @media screen and (max-width: 425px) {
-  .header-banner .logo {
-    max-width: 145px;
+  body #root .header-banner .logo {
+    max-width: 9rem;
   }
 }
-
-.footer-banner {
+body #root .header-banner nav {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 24px;
-  font-weight: 500;
-  background-color: #000000;
-  padding: 3rem 3rem 0 3rem;
-  color: white;
+  gap: 1rem;
+  justify-content: space-between;
+  margin-left: 0;
+  width: 22%;
 }
-
-.nav-link {
-  margin-left: 3rem;
+@media screen and (max-width: 425px) {
+  body #root .header-banner nav {
+    width: 43%;
+  }
+}
+body #root .header-banner .nav-link {
   text-decoration: none;
   color: #000000;
   font-size: 24px;
   font-weight: 500;
 }
 @media screen and (max-width: 425px) {
-  .nav-link {
+  body #root .header-banner .nav-link {
     font-size: 12px;
     text-transform: uppercase;
-    margin-left: 1rem;
-    justify-content: flex-end;
   }
 }
-.nav-link.active {
+body #root .header-banner .nav-link.active {
   text-decoration: underline;
+}
+body #root .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 3rem 5rem 0rem 5rem;
+  width: 90%;
+}
+@media screen and (max-width: 425px) {
+  body #root .container {
+    width: 100%;
+    margin: 0rem;
+  }
+}
+body #root .footer-banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 500;
+  background-color: #000000;
+  padding: 3rem 3rem 2rem 3rem;
+  color: white;
+}
+body #root .footer-banner p {
+  padding-top: 2.5rem;
+}
+@media screen and (max-width: 425px) {
+  body #root .footer-banner {
+    width: 100%;
+    height: 13rem;
+    margin-top: 1rem;
+    padding: 1rem 0;
+  }
+  body #root .footer-banner p {
+    width: 8rem;
+    font-size: 12px;
+    padding-top: 0.625rem;
+    text-align: center;
+  }
 }
 
 .fiche-logement-collapses {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  width: 94%;
-  margin-right: 5rem;
-  margin-left: 5rem;
-  gap: 56px;
+  justify-content: space-between;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
 }
-.fiche-logement-collapses .collapse-title h2 {
-  font-size: 18px !important;
+@media screen and (max-width: 425px) {
+  .fiche-logement-collapses {
+    flex-direction: column;
+    width: 90%;
+    margin-left: 1.15rem;
+  }
 }
-.fiche-logement-collapses .collapse-content {
-  font-size: 18px !important;
-  padding: 0 20px;
+.fiche-logement-collapses .collapse {
+  flex: 1;
+  max-width: calc(50% - 40px);
+}
+@media screen and (max-width: 425px) {
+  .fiche-logement-collapses .collapse {
+    flex: none;
+    max-width: 100%;
+  }
+}
+.fiche-logement-collapses .collapse .collapse-content ul {
+  margin: 1rem -2rem;
+  list-style-type: none;
+}
+@media screen and (max-width: 425px) {
+  .fiche-logement-collapses .collapse .collapse-content ul {
+    font-size: 12px;
+    margin: 0.5rem -2.5rem;
+  }
+}
+
+.about-collapses {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 0.5rem 4rem;
+}
+@media screen and (max-width: 425px) {
+  .about-collapses {
+    margin: 0;
+  }
+}
+.about-collapses .collapse {
+  width: 80%;
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 425px) {
+  .about-collapses .collapse {
+    width: 88%;
+    margin-bottom: 0rem;
+  }
 }
 
 .carousel {
   position: relative;
+  width: 100%;
   height: 415px;
   overflow: hidden;
   margin: 0 5rem;
+}
+@media screen and (max-width: 425px) {
+  .carousel {
+    width: 90%;
+    height: 255px;
+    margin: 0;
+  }
 }
 .carousel .carousel-image {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 25px;
+}
+@media screen and (max-width: 425px) {
+  .carousel .carousel-image {
+    border-radius: 10px;
+  }
 }
 .carousel .carousel-button {
   position: absolute;
@@ -94,11 +212,27 @@ body {
   width: 96px;
   height: 120px;
 }
+@media screen and (max-width: 425px) {
+  .carousel .carousel-button img {
+    width: 24px;
+    height: 24px;
+  }
+}
 .carousel .carousel-button.prev {
   left: 5px;
 }
+@media screen and (max-width: 425px) {
+  .carousel .carousel-button.prev {
+    left: -5px;
+  }
+}
 .carousel .carousel-button.next {
   right: 5px;
+}
+@media screen and (max-width: 425px) {
+  .carousel .carousel-button.next {
+    right: -5px;
+  }
 }
 .carousel .carousel-counter {
   position: absolute;
@@ -108,15 +242,37 @@ body {
   color: white;
   font-size: 18px;
 }
+@media screen and (max-width: 425px) {
+  .carousel .carousel-counter {
+    color: transparent;
+  }
+}
 
 .logement-info {
   display: flex;
   justify-content: space-between;
   margin: 0.5rem 5rem 0.5rem 5rem;
+  width: 100%;
+}
+@media screen and (max-width: 425px) {
+  .logement-info {
+    width: 90%;
+    margin-right: 0;
+    margin-left: 0;
+    flex-direction: column;
+  }
 }
 .logement-info .left-column {
   display: flex;
   flex-direction: column;
+  width: 60%;
+  margin-top: 24px;
+}
+@media screen and (max-width: 425px) {
+  .logement-info .left-column {
+    margin-top: 0rem;
+    width: 100%;
+  }
 }
 .logement-info .left-column h1 {
   font-size: 36px;
@@ -124,15 +280,31 @@ body {
   color: #FF6060;
   margin-bottom: 0;
 }
+@media screen and (max-width: 425px) {
+  .logement-info .left-column h1 {
+    font-size: 18px;
+  }
+}
 .logement-info .left-column p {
   font-size: 18px;
   font-weight: 500;
   margin-top: 5px;
 }
+@media screen and (max-width: 425px) {
+  .logement-info .left-column p {
+    font-size: 14px;
+  }
+}
 .logement-info .left-column .tags {
   display: flex;
   align-items: center;
   gap: 10px;
+  margin-top: 1.5rem;
+}
+@media screen and (max-width: 425px) {
+  .logement-info .left-column .tags {
+    margin-top: 0.5rem;
+  }
 }
 .logement-info .left-column .tags .tag {
   display: flex;
@@ -147,6 +319,11 @@ body {
   text-align: center;
   min-height: 25px;
 }
+@media screen and (max-width: 425px) {
+  .logement-info .left-column .tags .tag {
+    font-size: 10px;
+  }
+}
 .logement-info .right-column {
   display: flex;
   flex-direction: column;
@@ -154,11 +331,24 @@ body {
   justify-content: space-between;
   margin-top: 24px;
 }
+@media screen and (max-width: 425px) {
+  .logement-info .right-column {
+    margin-top: 1rem;
+    width: 100%;
+    align-items: center;
+    flex-direction: row-reverse;
+  }
+}
 .logement-info .right-column .host-info {
   display: flex;
   align-items: center;
   gap: 10px;
   margin-bottom: 15px;
+}
+@media screen and (max-width: 425px) {
+  .logement-info .right-column .host-info {
+    margin-bottom: 0;
+  }
 }
 .logement-info .right-column .host-info .host-name {
   display: flex;
@@ -167,6 +357,11 @@ body {
   color: #FF6060;
   font-size: 18px;
   font-weight: 500;
+}
+@media screen and (max-width: 425px) {
+  .logement-info .right-column .host-info .host-name {
+    font-size: 12px;
+  }
 }
 .logement-info .right-column .host-info .host-name p {
   margin: 0;
@@ -181,6 +376,12 @@ body {
   height: 64px;
   border-radius: 50%;
 }
+@media screen and (max-width: 425px) {
+  .logement-info .right-column .host-info img {
+    width: 32px;
+    height: 32px;
+  }
+}
 .logement-info .right-column .rating {
   display: flex;
   gap: 5px;
@@ -189,6 +390,12 @@ body {
   width: 30px;
   height: 30px;
   fill: #E3E3E3;
+}
+@media screen and (max-width: 425px) {
+  .logement-info .right-column .rating .star {
+    width: 18px;
+    height: 18px;
+  }
 }
 .logement-info .right-column .rating .star--active {
   fill: #FF6060;
@@ -207,17 +414,32 @@ body {
   color: #FF6060;
   margin: 8rem 0;
 }
+@media screen and (max-width: 425px) {
+  .error-page h1 {
+    font-size: 6rem;
+  }
+}
 .error-page p {
   font-size: 2.25rem;
   font-weight: 500;
   color: #FF6060;
   margin: 0;
 }
+@media screen and (max-width: 425px) {
+  .error-page p {
+    font-size: 1.125rem;
+  }
+}
 .error-page a {
   color: #000000;
   font-size: 1.2rem;
   font-weight: 500;
   margin: 8rem 0;
+}
+@media screen and (max-width: 425px) {
+  .error-page a {
+    font-size: 0.875rem;
+  }
 }
 
 .banner {
@@ -226,7 +448,8 @@ body {
   filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
   background-position: center;
   height: 220px;
-  margin: 2rem 5rem;
+  width: 100%;
+  margin-bottom: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -235,10 +458,11 @@ body {
 }
 @media screen and (max-width: 425px) {
   .banner {
-    width: 335px;
+    width: 89%;
     height: 111px;
-    margin: 1rem;
+    margin: 0 1rem 0rem 1rem;
     border-radius: 10px;
+    justify-content: flex-start;
   }
 }
 .banner .overlay {
@@ -266,23 +490,12 @@ body {
   .banner h1 {
     font-size: 24px;
     text-align: left;
-    margin-left: 15px;
+    margin-left: 1rem;
+    width: 225px;
   }
 }
 
-.collapse-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 95%;
-  margin: 0 auto;
-  padding: 20px;
-}
-.collapse-container .collapse {
-  width: 80%;
-  margin-bottom: 30px;
-}
-.collapse-container .collapse .collapse-title {
+.collapse-title {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -293,18 +506,37 @@ body {
   position: relative;
   z-index: 1;
 }
-.collapse-container .collapse .collapse-title h2 {
+@media screen and (max-width: 425px) {
+  .collapse-title {
+    height: 30px;
+    margin-top: 1rem;
+    padding: 0rem 0.7rem;
+  }
+}
+.collapse-title h2 {
   font-size: 24px;
   margin: 0;
 }
-.collapse-container .collapse .collapse-title .arrow {
+@media screen and (max-width: 425px) {
+  .collapse-title h2 {
+    font-size: 13px;
+  }
+}
+.collapse-title .arrow {
   cursor: pointer;
+  transform: rotate(180deg);
   transition: transform 0.3s ease-out;
 }
-.collapse-container .collapse .collapse-title .arrow.open {
-  transform: rotate(180deg);
+@media screen and (max-width: 425px) {
+  .collapse-title .arrow {
+    width: 6%;
+  }
 }
-.collapse-container .collapse .collapse-content {
+.collapse-title .arrow.open {
+  transform: rotate(0deg);
+}
+
+.collapse-content {
   background-color: #F6F6F6;
   transition: max-height 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
   transform: translateY(-50%);
@@ -315,31 +547,47 @@ body {
   font-size: 18px;
   z-index: 0;
 }
-.collapse-container .collapse .collapse-content.open {
+.collapse-content p {
+  margin: 1rem 0.3rem;
+}
+@media screen and (max-width: 425px) {
+  .collapse-content p {
+    font-size: 12px;
+    margin: 0.5rem 0;
+  }
+}
+.collapse-content.open {
   transform: translateY(0);
   max-height: 200px;
   opacity: 1;
 }
 
 .card-list {
+  width: 100%;
   background-color: #F6F6F6;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  gap: 4rem;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
-  margin: 3rem 5rem 3rem 5rem;
+  padding: 4rem;
+  margin-top: 1rem;
 }
 @media screen and (max-width: 425px) {
   .card-list {
     grid-template-columns: repeat(1, 1fr);
     gap: 1rem;
     background-color: transparent;
-    margin: 1rem;
-    padding: 0rem;
+    margin: 0;
+    margin-top: 1rem;
+    padding: 0;
+    width: 335px;
   }
-  .card-list .card:nth-child(n+4) .card.card-empty:nth-child(n+4) {
+  .card-list a {
+    height: 255px;
+    width: 335px;
+  }
+  .card-list a:nth-child(n+4) {
     display: none;
   }
 }
@@ -372,6 +620,7 @@ body {
   opacity: 0.5;
 }
 .card-list .card .card-title {
+  width: 40%;
   position: absolute;
   z-index: 1;
   bottom: 20px;

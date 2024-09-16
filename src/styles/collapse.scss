@@ -1,90 +1,71 @@
+@import '../styles/variables';
+@import '../styles/mixins';
 
-.collapse-container {
+.collapse-title {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    width: 100%;
-    margin: 0.5rem 4rem;
+    background-color: $first-color;
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: white;
+    position: relative;
+    z-index: 1;
 
-    @include breakpoint-mobile {        
-        margin: 0;
+    @include breakpoint-mobile {
+        height: 30px;
+        margin-top: 1rem;
+        padding: 0rem 0.7rem;
     }
 
-    .collapse {
-        width: 80%;
-        margin-bottom: 30px;
+    h2 {
+        font-size: 24px;
+        margin: 0;
 
         @include breakpoint-mobile {
-            width: 88%;
-            margin-bottom: 0rem;
+            font-size: 13px;
         }
-        
-        .collapse-title {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: $first-color;
-            padding: 10px 15px;
-            border-radius: 5px;
-            color: white;
-            position: relative;
-            z-index: 1;
+    }
 
-            @include breakpoint-mobile {
-                height: 30px;
-                margin-top: 1rem;
-                padding: 0rem 0.7rem;
-            }
+    .arrow {
+        cursor: pointer;
+        transform: rotate(180deg);
+        transition: transform 0.3s ease-out;
 
-            h2 {
-                font-size: 24px;
-                margin: 0;
-
-                @include breakpoint-mobile {
-                    font-size: 13px;
-                }
-            }
-        
-            .arrow {
-                cursor: pointer;
-                transform: rotate(180deg);
-                transition: transform 0.3s ease-out;
-
-                @include breakpoint-mobile {
-                    width: 6%;
-                }
-            
-                &.open {
-                    transform: rotate(0deg);
-                }
-            }
+        @include breakpoint-mobile {
+            width: 6%;
         }
-        
-        .collapse-content {
-            background-color: #F6F6F6;
-            transition: max-height 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
-            transform: translateY(-50%);
-            max-height: 0;
-            opacity: 0;
-            overflow: hidden;
-            padding: 0 15px;
-            font-size: 18px;
-            z-index: 0;
-
-            p {
-                margin: 1rem 0.3rem;
-
-                @include breakpoint-mobile {
-                    font-size: 12px;
-                    margin: 0.5rem 0;
-                }
-            }
-
-            &.open {
-                transform: translateY(0);
-                max-height: 200px;
-                opacity: 1;
-            }
+    
+        &.open {
+            transform: rotate(0deg);
         }
     }
 }
+
+.collapse-content {
+    background-color: #F6F6F6;
+    transition: max-height 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
+    transform: translateY(-50%);
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    padding: 0 15px;
+    font-size: 18px;
+    z-index: 0;
+
+    p {
+        margin: 1rem 0.3rem;
+
+        @include breakpoint-mobile {
+            font-size: 12px;
+            margin: 0.5rem 0;
+        }
+    }
+
+    &.open {
+        transform: translateY(0);
+        max-height: 200px;
+        opacity: 1;
+    }
+}
+ 
