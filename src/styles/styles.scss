@@ -12,8 +12,8 @@ body {
 
   @include breakpoint-mobile {
     margin: 0;
-    width: 100%;
-    box-sizing: border-box;
+    // width: 70%;
+    // box-sizing: border-box;
   } 
 
   #root {
@@ -24,8 +24,9 @@ body {
     padding: 0;
 
     @include breakpoint-mobile {
-      // margin: 1rem;
+      // margin: 1.2rem;
       box-sizing: border-box;
+      width: 100%;
     }   
 
     .header-banner {
@@ -36,8 +37,8 @@ body {
       width: 90%; 
 
         @include breakpoint-mobile {
-          margin: 1.5rem;
-          width: 88%;
+          margin: 1.2rem;
+          width: 89%;
         } 
 
       .logo {      
@@ -85,8 +86,8 @@ body {
       width: 90%;  
 
       @include breakpoint-mobile {
-        width: 100%;
-        margin: 0rem;
+        width: 90%;
+        margin: 1.2rem;
       } 
     }
     

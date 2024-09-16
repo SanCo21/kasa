@@ -11,17 +11,18 @@
 
     @include breakpoint-mobile {
         flex-direction: column;           
-        width: 90%;
-        margin-left: 1.15rem;
+        width: 100%;
     }
 
     .collapse {
         flex: 1;
         max-width: calc(50% - 40px);
+        margin: 1rem 0 2.5rem 0;
 
         @include breakpoint-mobile {  
-            flex: none;      
+            // flex: none;      
             max-width: 100%;
+            margin: 0;
         }
 
         .collapse-content ul {

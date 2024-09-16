@@ -5,7 +5,7 @@
     width: 100%;
 
     @include breakpoint-mobile {
-        width: 90%;
+        width: 100%;
         margin-right: 0;
         margin-left: 0;
         flex-direction: column;
@@ -48,7 +48,7 @@
             align-items: center;
             // flex-wrap: wrap;
             gap: 10px;
-            margin-top: 1.5rem;  
+            margin-top: 1rem;  
             
             @include breakpoint-mobile {
                 margin-top: 0.5rem;

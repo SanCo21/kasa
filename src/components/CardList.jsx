@@ -3,12 +3,13 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import Card from './Card';
 
-const CardList = ({ cardsArray }) => {
+const CardList = ({ cardsArray }) => {  
+
     return (
         <div className="card-list">
           {cardsArray.map((card) => (
-            <Link to={`/logement/${card.id}`} key={card.id}>
-              <Card
+          <Link to={`/logement/${card.id}`} key={card.id}>
+             <Card
                 image={card.cover}
                 title={card.title}
               />

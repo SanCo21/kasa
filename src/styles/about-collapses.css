@@ -16,7 +16,7 @@
 }
 @media screen and (max-width: 425px) {
   .about-collapses .collapse {
-    width: 88%;
+    width: 100%;
     margin-bottom: 0rem;
   }
 }/*# sourceMappingURL=about-collapses.css.map */

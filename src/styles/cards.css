@@ -9,7 +9,7 @@
   padding: 4rem;
   margin-top: 1rem;
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 375px) {
   .card-list {
     grid-template-columns: repeat(1, 1fr);
     gap: 1rem;
@@ -17,14 +17,11 @@
     margin: 0;
     margin-top: 1rem;
     padding: 0;
-    width: 335px;
+    width: 100%;
   }
   .card-list a {
     height: 255px;
     width: 335px;
-  }
-  .card-list a:nth-child(n+4) {
-    display: none;
   }
 }
 .card-list .card {
@@ -36,10 +33,10 @@
   height: 340px;
   width: 340px;
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 375px) {
   .card-list .card {
     height: 255px;
-    width: 335px;
+    width: 100%;
   }
 }
 .card-list .card.card-empty {
