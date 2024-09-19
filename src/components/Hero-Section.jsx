@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 
 const Banner = ({ title, image}) => (
-    <div className="banner" style={{backgroundImage: `url(${image})`}}>
+    <div className="hero-section" style={{backgroundImage: `url(${image})`}}>
         <div className="overlay"></div>
         <h1>{title}</h1>
     </div>  

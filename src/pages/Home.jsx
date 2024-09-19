@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import CardList from "../components/CardList";
-import Banner from "../components/Banner";
+import Banner from "../components/Hero-Section";
 import bannerImage from '../assets/images/Image_1.png';
 // import { Link } from 'react-router-dom';
 // import Card from "../components/Card";

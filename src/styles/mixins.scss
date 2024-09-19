@@ -1,12 +1,23 @@
 
+/* Small devices (phones, less than 768px) */
 @mixin breakpoint-mobile {
     @media screen and (max-width: $breakpoint-mobile) {
         @content;
     }
 }
 
+/* Medium devices (tablets, less/equal than 1024px) */
 @mixin breakpoint-tablet {
-    @media screen and (max-width: $breakpoint-tablet) {
+    @media screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet) {
         @content;
     }
 }
+ 
+// * large devices (desktop, less/equal than 1200px) */
+ @mixin breakpoint-desktop {
+    @media screen and (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop) {
+        @content;
+    }
+ }
+
+

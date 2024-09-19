@@ -1,5 +1,5 @@
 import Collapse from "../components/Collapse";
-import Banner from "../components/Banner";
+import Banner from "../components/Hero-Section";
 import bannerImage from '../assets/images/Image_2.png';
  
 

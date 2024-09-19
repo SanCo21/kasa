@@ -16,6 +16,18 @@ body {
     // box-sizing: border-box;
   } 
 
+  @include breakpoint-tablet {
+    margin: 1rem;
+    // width: 100%;
+    // box-sizing: border-box;
+  } 
+
+  @include breakpoint-desktop {
+    margin: 0;
+    // width: 100%;
+    // box-sizing: border-box;
+  } 
+
   #root {
     width: 100%;
     box-sizing: border-box;
@@ -29,6 +41,18 @@ body {
       width: 100%;
     }   
 
+    // @include breakpoint-tablet {
+    //   // margin: 1.2rem;
+    //   box-sizing: border-box;
+    //   width: 100%;
+    // } 
+
+    // @include breakpoint-tablet {
+    //   // margin: 1.2rem;
+    //   box-sizing: border-box;
+    //   width: 100%;
+    // }
+
     .header-banner {
       display: flex;
       justify-content: space-between;
@@ -36,10 +60,20 @@ body {
       margin: 3rem 5rem 3rem 5rem; 
       width: 90%; 
 
-        @include breakpoint-mobile {
-          margin: 1.2rem;
-          width: 89%;
-        } 
+      @include breakpoint-desktop {
+        margin: 3rem 4rem;
+        width: 90%;
+      }
+
+      @include breakpoint-tablet {
+        margin: 2rem;
+        width: 90%;
+      }
+
+      @include breakpoint-mobile {
+        margin: 1.2rem;
+        width: 90%;
+      }         
 
       .logo {      
         @include breakpoint-mobile {
@@ -49,19 +83,29 @@ body {
 
       nav {
         display: flex;
-        gap: 1rem;
-        justify-content: space-between;
+        gap: 5rem;
+        justify-content: flex-end;
         margin-left: 0;
-        width: 22%;
+        margin-right: 0.1rem;
+        width: 50%;
 
         @include breakpoint-mobile {
-          width: 43%;
+          // width: 50%;
+          gap: 2rem;
         } 
         
+        @include breakpoint-tablet {
+          // width: 50%;
+          gap: 3rem;
+        } 
+
+        @include breakpoint-desktop {
+          // width: 50%;
+          gap: 4rem;
+        }
       }
 
       .nav-link {
-        // margin-left: 3rem;
         text-decoration: none; 
         color: $third-color; 
         font-size: 24px;
@@ -70,6 +114,11 @@ body {
           @include breakpoint-mobile {
             font-size: 12px;
             text-transform: uppercase;
+          }
+          
+          @include breakpoint-tablet {
+            font-size: 18px;
+            // text-transform: uppercase;
           } 
             
         &.active {
@@ -80,6 +129,7 @@ body {
 
     .container {
       display: flex;
+      justify-content: center;
       flex-direction: column;
       align-items: center;
       margin: 3rem 5rem 0rem 5rem;
@@ -89,6 +139,16 @@ body {
         width: 90%;
         margin: 1.2rem;
       } 
+
+      @include breakpoint-tablet {
+        width: 90%;
+        margin: 2rem;
+      }
+
+      @include breakpoint-desktop {
+        width: 90%;
+        margin: 3rem;
+      }
     }
     
     .footer-banner {
@@ -102,11 +162,29 @@ body {
       // margin-top: 3rem;
       padding: 3rem 3rem 2rem 3rem;
       color: white;
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
 
       p {
         padding-top: 2.5rem;
       }
       
+      @include breakpoint-tablet {
+        width: 100%;
+        height: 13rem;
+        // box-sizing: border-box;
+        margin-top: 1rem;
+        padding: 1rem 0; 
+
+        p {
+          width: 8rem;
+          font-size: 12px;
+          padding-top: 0.625rem;
+          text-align: center;
+        }
+      } 
+
       @include breakpoint-mobile {
         width: 100%;
         height: 13rem;

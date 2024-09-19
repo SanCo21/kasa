@@ -7,14 +7,37 @@
   display: grid;
   // grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
   grid-template-columns: repeat(3, 1fr);
-  gap: 4rem;
+  gap: 3rem;
+  // gap: 3%;
   justify-content: center;
   align-items: center;
-  padding: 4rem;
+  // padding: 4rem;
+  padding: 4%;
   margin-top: 1rem;
+  margin-bottom: 3rem;
+
+    @include breakpoint-desktop {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3rem;
+      background-color: transparent;
+      margin: 0 0rem;
+      margin-top: 1rem;
+      padding: 0rem;
+      width: 100%;
+    }
+    
+    @include breakpoint-tablet {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2.5rem;
+      background-color: transparent;
+      margin: 0;
+      margin-top: 1rem;
+      padding: 0;
+      width: 100%;
+    }
 
     @include breakpoint-mobile {
-      grid-template-columns: repeat(1, 1fr);
+      grid-template-columns: repeat(1, 1fr);      
       gap: 1rem;
       // align-items: center;
       background-color: transparent;
@@ -22,20 +45,6 @@
       margin-top: 1rem;
       padding: 0;
       width: 100%;
-
-      a {       
-        height: 255px;
-        width: 335px;
-      
-        // Display only 3 cards on mobile if data loading fails
-        // &:nth-child(n+4) {
-        //   display: none;        
-        // }
-
-        // &[href="undefined"] {
-        //   display: none;
-        // }
-      }
     }
 
   .card {
@@ -45,15 +54,25 @@
     border-radius: 10px;
     cursor: pointer; 
     height: 340px;
-    width: 340px;
+    // width: 100%;
+    // max-width: 340px;
+
+    @include breakpoint-desktop {             
+      height: 320px;
+      width: 100%;
+    }
+
+    @include breakpoint-tablet {             
+      height: 290px;
+      // width: 335px;
+      width: 100%;
+    }
 
     @include breakpoint-mobile {             
       height: 255px;
       // width: 335px;
       width: 100%;
     }
-      
-    
     
     &.card-empty {
       background: $first-color 100%;
