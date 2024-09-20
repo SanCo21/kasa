@@ -10,8 +10,8 @@ const Banner = ({ title, image}) => (
 );
 
 Banner.propTypes = {
-title: PropTypes.string.isRequired,
-image: PropTypes.string
+title: PropTypes.string,
+image: PropTypes.string.isRequired
 };
 
 export default Banner;

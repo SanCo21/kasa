@@ -1,3 +1,5 @@
+/* Small devices (phones, less than 768px) */
+/* Medium devices (tablets, less/equal than 1024px) */
 .fiche-logement-collapses {
   display: flex;
   flex-direction: row;
@@ -6,7 +8,7 @@
   margin-left: 0;
   margin-right: 0;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 767px) {
   .fiche-logement-collapses {
     flex-direction: column;
     width: 100%;
@@ -17,7 +19,12 @@
   max-width: calc(50% - 40px);
   margin: 1rem 0 2.5rem 0;
 }
-@media screen and (max-width: 375px) {
+@media screen and (min-width: 767px) and (max-width: 1024px) {
+  .fiche-logement-collapses .collapse {
+    margin-bottom: 1rem;
+  }
+}
+@media screen and (max-width: 767px) {
   .fiche-logement-collapses .collapse {
     max-width: 100%;
     margin: 0;
@@ -27,7 +34,13 @@
   margin: 1rem -2rem;
   list-style-type: none;
 }
-@media screen and (max-width: 375px) {
+@media screen and (min-width: 767px) and (max-width: 1024px) {
+  .fiche-logement-collapses .collapse .collapse-content ul {
+    font-size: 14px;
+    margin: 1rem -2.5rem;
+  }
+}
+@media screen and (max-width: 767px) {
   .fiche-logement-collapses .collapse .collapse-content ul {
     font-size: 12px;
     margin: 0.5rem -2.5rem;

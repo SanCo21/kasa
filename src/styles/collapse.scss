@@ -12,15 +12,29 @@
     position: relative;
     z-index: 1;
 
+    @include breakpoint-tablet {
+        height: 40px;
+        margin-top: 1rem;
+        padding: 0 1rem;
+    }
+
     @include breakpoint-mobile {
         height: 30px;
         margin-top: 1rem;
-        padding: 0rem 0.7rem;
+        padding: 0 0.7rem;
     }
 
     h2 {
         font-size: 24px;
         margin: 0;
+
+        @include breakpoint-desktop {
+            font-size: 20px;
+        }
+
+        @include breakpoint-tablet {
+            font-size: 17px;
+        }
 
         @include breakpoint-mobile {
             font-size: 13px;
@@ -31,9 +45,17 @@
         cursor: pointer;
         transform: rotate(180deg);
         transition: transform 0.3s ease-out;
+        
+        @include breakpoint-desktop {
+            width: 22px;
+        }
+
+        @include breakpoint-tablet {
+            width: 20px;
+        }
 
         @include breakpoint-mobile {
-            width: 6%;
+            width: 16px;
         }
     
         &.open {
@@ -56,6 +78,11 @@
     p {
         margin: 1rem 0.3rem;
 
+        @include breakpoint-tablet {
+            font-size: 14px;
+            margin: 1rem 0;
+        }
+
         @include breakpoint-mobile {
             font-size: 12px;
             margin: 0.5rem 0;
@@ -64,7 +91,7 @@
 
     &.open {
         transform: translateY(0);
-        max-height: 200px;
+        max-height: 500px;
         opacity: 1;
     }
 }

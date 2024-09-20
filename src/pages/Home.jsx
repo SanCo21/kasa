@@ -22,7 +22,7 @@ const Home = () => {
       // Empty cards if data loading fails
       setCards(Array(6).fill({ title: 'Titre de la location', image: '' }));
     });
-}, []);
+    }, []);
 
     return (
       <div className='container'>

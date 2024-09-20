@@ -17,8 +17,8 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 3rem;
     background-color: transparent;
-    margin: 0 0rem;
     margin-top: 1rem;
+    margin-bottom: 2.5rem;
     padding: 0rem;
     width: 100%;
   }

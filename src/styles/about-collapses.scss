@@ -8,6 +8,11 @@
     width: 100%;
     margin: 0.5rem 4rem;
 
+    @include breakpoint-tablet {        
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+
     @include breakpoint-mobile {        
         margin: 0;
     }
@@ -15,6 +20,11 @@
     .collapse {
         width: 80%;
         margin-bottom: 30px;
+
+        @include breakpoint-tablet {
+            width: 100%;
+            margin-bottom: 0.5rem;
+        }
 
         @include breakpoint-mobile {
             width: 100%;

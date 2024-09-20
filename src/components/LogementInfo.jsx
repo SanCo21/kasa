@@ -30,14 +30,14 @@ const LogementInfo = ({ title, location, host, rating, tags }) => {
 };
 
 LogementInfo.propTypes = {
-    title: PropTypes.string.isRequired,
-    location: PropTypes.string.isRequired,
-    host: PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      picture: PropTypes.string.isRequired
-    }).isRequired,
-    rating: PropTypes.string.isRequired,
-    tags: PropTypes.arrayOf(PropTypes.string).isRequired
-  };
+  title: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  host: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    picture: PropTypes.string.isRequired
+  }).isRequired,
+  rating: PropTypes.string.isRequired,
+  tags: PropTypes.arrayOf(PropTypes.string).isRequired
+};
 
 export default LogementInfo;

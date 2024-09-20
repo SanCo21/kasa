@@ -19,6 +19,12 @@
         max-width: calc(50% - 40px);
         margin: 1rem 0 2.5rem 0;
 
+        @include breakpoint-tablet {  
+            // flex: none;      
+            // max-width: 100%;
+            margin-bottom: 1rem;
+        }
+
         @include breakpoint-mobile {  
             // flex: none;      
             max-width: 100%;
@@ -28,6 +34,11 @@
         .collapse-content ul {
             margin: 1rem -2rem;
             list-style-type: none;
+
+            @include breakpoint-tablet {            
+                font-size: 14px;
+                margin: 1rem -2.5rem;
+            }
 
             @include breakpoint-mobile {            
                 font-size: 12px;

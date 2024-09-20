@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import LogementInfo from '../components/LogementInfo';
 import Carousel from '../components/carousel';
 import Collapse from '../components/Collapse';
+import Error from './Error';
 
 const FicheLogement = () => {
   const { id } = useParams();
@@ -26,7 +27,7 @@ const FicheLogement = () => {
       });
   }, [id, navigate]);
 
-  if (!logement) return <div>Loading...</div>;
+  if (!logement) return <Error />;
 
   return (
     <div className='container'>
